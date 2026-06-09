@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg:         #ffffff;
+  --bg:         #EEEEEE;
   --fg:         #1a2e2a;
   --fg-2:       #3d6057;
   --fg-3:       #8aada7;
@@ -74,13 +74,13 @@ body {
 .prose p { margin-bottom: 1.4em; }
 
 .prose a {
-  color: var(--fg);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--border);
+  text-decoration-color: var(--accent-dim);
   transition: text-decoration-color 0.15s;
 }
-.prose a:hover { text-decoration-color: var(--fg); }
+.prose a:hover { text-decoration-color: var(--accent); }
 
 .prose code {
   background: var(--code-bg);
@@ -116,11 +116,15 @@ body {
 }
 
 .prose blockquote {
-  border-left: 2px solid var(--fg);
+  border-left: 3px solid var(--accent);
   padding-left: 1.25rem;
   color: var(--fg-2);
   margin: 2em 0;
   font-style: normal;
+  background: var(--accent-dim);
+  border-radius: 0 4px 4px 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .prose ul  { list-style: disc;    padding-left: 1.5em; margin-bottom: 1.4em; }
@@ -158,7 +162,7 @@ body {
 }
 
 /* ── Utility ── */
-::selection { background: var(--accent); color: #111; }
+::selection { background: var(--accent); color: #fff; }
 
 /* ── Post card ── */
 .post-card {
