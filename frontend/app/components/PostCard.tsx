@@ -12,7 +12,7 @@ export default function PostCard({ post, variant = "default" }: Props) {
     return (
       <Link
         href={`/posts/${post.slug}`}
-        className="block group py-3"
+        className="block group py-3 post-card"
         style={{ borderBottom: "1px solid var(--border)" }}
       >
         <p
@@ -21,9 +21,17 @@ export default function PostCard({ post, variant = "default" }: Props) {
         >
           {post.title}
         </p>
-        <p className="text-xs" style={{ color: "var(--fg-3)" }}>
-          {post.category.name} · {formatDateShort(post.publishedAt)}
-        </p>
+        <div className="flex items-center gap-2">
+          <span
+            className="inline-block text-xs px-2 py-0.5 rounded-full font-medium"
+            style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
+          >
+            {post.category.name}
+          </span>
+          <span className="text-xs" style={{ color: "var(--fg-3)" }}>
+            {formatDateShort(post.publishedAt)}
+          </span>
+        </div>
       </Link>
     );
   }
@@ -31,18 +39,21 @@ export default function PostCard({ post, variant = "default" }: Props) {
   return (
     <Link
       href={`/posts/${post.slug}`}
-      className="block group py-5"
+      className="block group py-5 post-card"
       style={{ borderBottom: "1px solid var(--border)" }}
     >
-      <div className="flex items-baseline gap-3 mb-2 flex-wrap">
-        <span className="text-xs tabular-nums shrink-0" style={{ color: "var(--fg-3)" }}>
+      <div className="flex items-center gap-2 mb-2.5 flex-wrap">
+        <span
+          className="inline-block text-xs px-2 py-0.5 rounded-full font-medium"
+          style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
+        >
+          {post.category.name}
+        </span>
+        <span className="text-xs tabular-nums" style={{ color: "var(--fg-3)" }}>
           {formatDateShort(post.publishedAt)}
         </span>
         <span className="text-xs" style={{ color: "var(--fg-3)" }}>
-          {post.category.name}
-        </span>
-        <span className="text-xs" style={{ color: "var(--fg-3)" }}>
-          {post.readingTime}분
+          · {post.readingTime}분
         </span>
       </div>
       <h2

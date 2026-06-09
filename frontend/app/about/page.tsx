@@ -31,15 +31,18 @@ const PROJECTS = [
 
 export default function AboutPage() {
   return (
-    <div className="max-w-2xl mx-auto px-5 sm:px-6 py-14">
-
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-14">
       {/* 소개 */}
       <section className="mb-14">
         <h1 className="text-lg font-semibold mb-5">소개</h1>
         <p className="text-sm leading-[1.9]" style={{ color: "var(--fg-2)" }}>
-          안녕하세요, 김가빈입니다.<br />
-          Java와 Spring Boot로 백엔드를, React와 Next.js로 프론트엔드를 만들고 있습니다.<br />
-          알고리즘 문제 풀기를 좋아하고, 배운 것을 글로 정리하는 습관을 들이고 있습니다.
+          안녕하세요, Lka09입니다.
+          <br />
+          Java와 Spring Boot로 백엔드를, React와 Next.js로 프론트엔드를 만들고
+          있습니다.
+          <br />
+          알고리즘 문제 풀기를 좋아하고, 배운 것을 글로 정리하는 습관을 들이고
+          있습니다.
         </p>
         <div className="flex gap-5 mt-6">
           <a
@@ -62,14 +65,22 @@ export default function AboutPage() {
       </section>
 
       {/* 기술 스택 */}
-      <section className="mb-14" style={{ borderTop: "1px solid var(--border)" }}>
-        <h2 className="text-xs font-medium mt-8 mb-6 uppercase tracking-widest" style={{ color: "var(--fg-3)" }}>
+      <section
+        className="mb-14"
+        style={{ borderTop: "1px solid var(--border)" }}
+      >
+        <h2
+          className="text-xs font-medium mt-8 mb-6 uppercase tracking-widest"
+          style={{ color: "var(--fg-3)" }}
+        >
           기술 스택
         </h2>
         <div className="space-y-4">
           {STACK.map(({ label, items }) => (
             <div key={label} className="flex gap-6 text-sm">
-              <span className="w-14 shrink-0" style={{ color: "var(--fg-3)" }}>{label}</span>
+              <span className="w-14 shrink-0" style={{ color: "var(--fg-3)" }}>
+                {label}
+              </span>
               <span style={{ color: "var(--fg-2)" }}>{items}</span>
             </div>
           ))}
@@ -78,7 +89,10 @@ export default function AboutPage() {
 
       {/* 프로젝트 */}
       <section style={{ borderTop: "1px solid var(--border)" }}>
-        <h2 className="text-xs font-medium mt-8 mb-6 uppercase tracking-widest" style={{ color: "var(--fg-3)" }}>
+        <h2
+          className="text-xs font-medium mt-8 mb-6 uppercase tracking-widest"
+          style={{ color: "var(--fg-3)" }}
+        >
           프로젝트
         </h2>
         <div>
@@ -89,14 +103,23 @@ export default function AboutPage() {
               style={{ borderBottom: "1px solid var(--border)" }}
             >
               <div className="flex items-baseline justify-between mb-2">
-                <span className="text-sm font-medium" style={{ color: "var(--fg)" }}>
+                <span
+                  className="text-sm font-medium"
+                  style={{ color: "var(--fg)" }}
+                >
                   {proj.name}
                 </span>
-                <span className="text-xs ml-4 shrink-0" style={{ color: "var(--fg-3)" }}>
+                <span
+                  className="text-xs ml-4 shrink-0"
+                  style={{ color: "var(--fg-3)" }}
+                >
                   {proj.period}
                 </span>
               </div>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--fg-2)" }}>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "var(--fg-2)" }}
+              >
                 {proj.desc}
               </p>
               {proj.link && (

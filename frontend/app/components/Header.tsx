@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV = [
-  { href: "/posts",      label: "글" },
+  { href: "/posts", label: "글" },
   { href: "/categories", label: "카테고리" },
-  { href: "/about",      label: "소개" },
+  { href: "/about", label: "소개" },
 ];
 
 export default function Header() {
@@ -22,27 +22,37 @@ export default function Header() {
         borderBottom: "1px solid var(--border)",
       }}
     >
-      <div className="max-w-2xl mx-auto px-5 sm:px-6 flex items-center justify-between h-14">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 flex items-center justify-between h-16">
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight"
+          className="flex items-center gap-2"
           style={{ color: "var(--fg)" }}
         >
-          김가빈
+          <span
+            className="inline-block w-2 h-2 rounded-sm shrink-0"
+            style={{ background: "var(--accent)" }}
+          />
+          <span className="text-sm font-bold tracking-tight">Lka09</span>
         </Link>
 
         {/* 데스크탑 */}
-        <nav className="hidden sm:flex items-center gap-5">
+        <nav className="hidden sm:flex items-center gap-6">
           {NAV.map(({ href, label }) => {
             const active = pathname.startsWith(href);
             return (
               <Link
                 key={href}
                 href={href}
-                className="text-sm transition-colors"
-                style={{ color: active ? "var(--fg)" : "var(--fg-3)" }}
+                className="relative text-sm pb-0.5 transition-colors"
+                style={{ color: active ? "var(--accent)" : "var(--fg-3)" }}
               >
                 {label}
+                {active && (
+                  <span
+                    className="absolute left-0 right-0 -bottom-0.5 h-[2px] rounded-full"
+                    style={{ background: "var(--accent)" }}
+                  />
+                )}
               </Link>
             );
           })}

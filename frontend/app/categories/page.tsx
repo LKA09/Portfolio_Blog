@@ -9,7 +9,7 @@ export default async function CategoriesPage() {
   const total = categories.reduce((s, c) => s + c.postCount, 0);
 
   return (
-    <div className="max-w-2xl mx-auto px-5 sm:px-6 py-14">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-14">
       <div className="flex items-baseline justify-between mb-10">
         <h1 className="text-lg font-semibold">카테고리</h1>
         <span className="text-sm" style={{ color: "var(--fg-3)" }}>글 {total}편</span>
@@ -36,7 +36,10 @@ export default async function CategoriesPage() {
                 </p>
               )}
             </div>
-            <span className="text-sm ml-4 shrink-0" style={{ color: "var(--fg-3)" }}>
+            <span
+              className="text-xs ml-4 shrink-0 px-2 py-0.5 rounded-full font-medium tabular-nums"
+              style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
+            >
               {cat.postCount}편
             </span>
           </Link>

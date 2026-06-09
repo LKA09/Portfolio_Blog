@@ -2,7 +2,7 @@ import { Author, Category, Post, PostSummary, Tag } from "./types";
 
 export const AUTHOR: Author = {
   id: 1,
-  name: "김가빈",
+  name: "Lka09",
   bio: "풀스택 개발자 & 문제 해결을 좋아하는 개발자. Java, Spring Boot, React, Next.js를 주로 사용합니다.",
   avatar: "/avatar.png",
   github: "https://github.com/Lka09",
@@ -10,11 +10,46 @@ export const AUTHOR: Author = {
 };
 
 export const CATEGORIES: Category[] = [
-  { id: 1, name: "개발", slug: "dev", description: "개발 관련 글", postCount: 5, color: "blue" },
-  { id: 2, name: "알고리즘", slug: "algorithm", description: "알고리즘 문제 풀이", postCount: 3, color: "green" },
-  { id: 3, name: "프로젝트", slug: "project", description: "개인 프로젝트 기록", postCount: 3, color: "purple" },
-  { id: 4, name: "일상", slug: "daily", description: "일상 이야기", postCount: 2, color: "orange" },
-  { id: 5, name: "독서", slug: "book", description: "읽은 책 이야기", postCount: 1, color: "red" },
+  {
+    id: 1,
+    name: "개발",
+    slug: "dev",
+    description: "개발 관련 글",
+    postCount: 5,
+    color: "blue",
+  },
+  {
+    id: 2,
+    name: "알고리즘",
+    slug: "algorithm",
+    description: "알고리즘 문제 풀이",
+    postCount: 3,
+    color: "green",
+  },
+  {
+    id: 3,
+    name: "프로젝트",
+    slug: "project",
+    description: "개인 프로젝트 기록",
+    postCount: 3,
+    color: "purple",
+  },
+  {
+    id: 4,
+    name: "일상",
+    slug: "daily",
+    description: "일상 이야기",
+    postCount: 2,
+    color: "orange",
+  },
+  {
+    id: 5,
+    name: "독서",
+    slug: "book",
+    description: "읽은 책 이야기",
+    postCount: 1,
+    color: "red",
+  },
 ];
 
 export const TAGS: Tag[] = [
@@ -35,7 +70,8 @@ export const POSTS: Post[] = [
     id: 1,
     title: "Next.js 16과 React 19로 블로그 만들기",
     slug: "nextjs-16-react-19-blog",
-    excerpt: "Next.js 16과 React 19의 새로운 기능을 활용해서 개인 블로그를 제작한 경험을 공유합니다. App Router, Server Components, 그리고 Tailwind CSS v4를 적극 활용했습니다.",
+    excerpt:
+      "Next.js 16과 React 19의 새로운 기능을 활용해서 개인 블로그를 제작한 경험을 공유합니다. App Router, Server Components, 그리고 Tailwind CSS v4를 적극 활용했습니다.",
     content: `# Next.js 16과 React 19로 블로그 만들기
 
 Next.js 16과 React 19가 릴리즈되면서 많은 새로운 기능이 추가되었습니다. 이번 포스팅에서는 이 기술들을 활용해서 개인 블로그를 만든 경험을 공유하겠습니다.
@@ -96,7 +132,8 @@ Tailwind CSS v4는 CSS-first 설정 방식을 도입했습니다:
     id: 2,
     title: "Spring Boot와 Next.js API 연동하기",
     slug: "spring-boot-nextjs-api-integration",
-    excerpt: "Spring Boot REST API와 Next.js 프론트엔드를 연동하는 방법을 단계별로 알아봅니다. CORS 설정부터 API 클라이언트 구현까지 실전 경험을 담았습니다.",
+    excerpt:
+      "Spring Boot REST API와 Next.js 프론트엔드를 연동하는 방법을 단계별로 알아봅니다. CORS 설정부터 API 클라이언트 구현까지 실전 경험을 담았습니다.",
     content: `# Spring Boot와 Next.js API 연동하기
 
 풀스택 개발을 할 때 백엔드와 프론트엔드를 연동하는 것은 필수적인 과정입니다.
@@ -154,7 +191,8 @@ NEXT_PUBLIC_API_URL=http://localhost:8080
     id: 3,
     title: "BFS/DFS 알고리즘 완벽 정리",
     slug: "bfs-dfs-algorithm-guide",
-    excerpt: "그래프 탐색의 핵심인 BFS와 DFS 알고리즘을 Java로 구현하고, 실전 백준 문제에 적용하는 방법을 정리했습니다.",
+    excerpt:
+      "그래프 탐색의 핵심인 BFS와 DFS 알고리즘을 Java로 구현하고, 실전 백준 문제에 적용하는 방법을 정리했습니다.",
     content: `# BFS/DFS 알고리즘 완벽 정리
 
 그래프 탐색 알고리즘은 코딩 테스트에서 빠지지 않는 주제입니다.
@@ -225,7 +263,8 @@ public void dfs(int node, boolean[] visited) {
     id: 4,
     title: "포트폴리오 블로그 제작기",
     slug: "portfolio-blog-devlog",
-    excerpt: "개인 포트폴리오 블로그를 제작하면서 겪었던 기술적 고민들과 설계 결정들을 기록합니다. Next.js와 Spring Boot를 선택한 이유부터 배포 전략까지.",
+    excerpt:
+      "개인 포트폴리오 블로그를 제작하면서 겪었던 기술적 고민들과 설계 결정들을 기록합니다. Next.js와 Spring Boot를 선택한 이유부터 배포 전략까지.",
     content: `# 포트폴리오 블로그 제작기
 
 개인 블로그를 만들기로 결심했을 때 가장 먼저 한 일은 기술 스택을 선정하는 것이었습니다.
@@ -267,7 +306,8 @@ public void dfs(int node, boolean[] visited) {
     id: 5,
     title: "TypeScript 제네릭 완전 정복",
     slug: "typescript-generics-guide",
-    excerpt: "TypeScript 제네릭의 개념부터 고급 활용법까지 실전 예제와 함께 알아봅니다. infer, conditional types, mapped types 등 심화 내용도 다룹니다.",
+    excerpt:
+      "TypeScript 제네릭의 개념부터 고급 활용법까지 실전 예제와 함께 알아봅니다. infer, conditional types, mapped types 등 심화 내용도 다룹니다.",
     content: `# TypeScript 제네릭 완전 정복
 
 TypeScript를 사용하면서 제네릭을 잘 활용하면 재사용 가능하고 타입 안전한 코드를 작성할 수 있습니다.
@@ -325,7 +365,8 @@ type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
     id: 6,
     title: "개발자로 성장하기 - 1년 회고",
     slug: "developer-growth-1year",
-    excerpt: "개발을 시작한 지 1년이 지났습니다. 지난 1년간 배운 것들, 실패했던 것들, 그리고 앞으로의 방향에 대해 솔직하게 이야기합니다.",
+    excerpt:
+      "개발을 시작한 지 1년이 지났습니다. 지난 1년간 배운 것들, 실패했던 것들, 그리고 앞으로의 방향에 대해 솔직하게 이야기합니다.",
     content: `# 개발자로 성장하기 - 1년 회고
 
 1년이라는 시간이 어떻게 지나갔는지 모를 만큼 정신없이 달려온 것 같습니다.
@@ -368,7 +409,8 @@ type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
     id: 7,
     title: "MySQL 인덱스 최적화 전략",
     slug: "mysql-index-optimization",
-    excerpt: "MySQL 인덱스의 동작 원리를 이해하고, EXPLAIN을 활용한 쿼리 분석과 실제 성능 최적화 사례를 공유합니다.",
+    excerpt:
+      "MySQL 인덱스의 동작 원리를 이해하고, EXPLAIN을 활용한 쿼리 분석과 실제 성능 최적화 사례를 공유합니다.",
     content: `# MySQL 인덱스 최적화 전략
 
 데이터베이스 성능 최적화에서 인덱스는 가장 중요한 요소 중 하나입니다.
@@ -419,7 +461,8 @@ ORDER BY published_at DESC;
     id: 8,
     title: "동적 프로그래밍(DP) 핵심 패턴 모음",
     slug: "dynamic-programming-patterns",
-    excerpt: "코딩 테스트에 자주 나오는 DP 패턴들을 유형별로 정리했습니다. 1차원 DP, 2차원 DP, 배낭 문제, LCS까지 실제 코드와 함께 설명합니다.",
+    excerpt:
+      "코딩 테스트에 자주 나오는 DP 패턴들을 유형별로 정리했습니다. 1차원 DP, 2차원 DP, 배낭 문제, LCS까지 실제 코드와 함께 설명합니다.",
     content: `# 동적 프로그래밍(DP) 핵심 패턴 모음
 
 DP는 코딩 테스트에서 가장 중요한 알고리즘 중 하나입니다.

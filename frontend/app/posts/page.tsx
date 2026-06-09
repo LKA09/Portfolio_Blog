@@ -47,7 +47,7 @@ export default function PostsPage() {
   const handleSort     = (v: "latest" | "oldest" | "popular") => { setSort(v); setPage(0); };
 
   return (
-    <div className="max-w-2xl mx-auto px-5 sm:px-6 py-14">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-14">
       <div className="flex items-baseline justify-between mb-10">
         <h1 className="text-lg font-semibold">글</h1>
         <span className="text-sm" style={{ color: "var(--fg-3)" }}>{total}편</span>
@@ -69,11 +69,15 @@ export default function PostsPage() {
       {/* 필터 행 */}
       <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
         {/* 카테고리 */}
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => handleCategory("")}
-            className="text-xs transition-colors"
-            style={{ color: category === "" ? "var(--fg)" : "var(--fg-3)" }}
+            className="text-xs px-2.5 py-1 rounded-full transition-all"
+            style={
+              category === ""
+                ? { background: "var(--accent)", color: "#111", fontWeight: 600 }
+                : { background: "var(--hover)", color: "var(--fg-3)" }
+            }
           >
             전체
           </button>
@@ -81,8 +85,12 @@ export default function PostsPage() {
             <button
               key={cat.id}
               onClick={() => handleCategory(cat.slug)}
-              className="text-xs transition-colors"
-              style={{ color: category === cat.slug ? "var(--fg)" : "var(--fg-3)" }}
+              className="text-xs px-2.5 py-1 rounded-full transition-all"
+              style={
+                category === cat.slug
+                  ? { background: "var(--accent)", color: "#111", fontWeight: 600 }
+                  : { background: "var(--hover)", color: "var(--fg-3)" }
+              }
             >
               {cat.name}
             </button>

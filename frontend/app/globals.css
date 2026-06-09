@@ -1,24 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --bg:      #ffffff;
-  --fg:      #111111;
-  --fg-2:    #555555;
-  --fg-3:    #999999;
-  --border:  #e8e8e8;
-  --hover:   #f5f5f5;
-  --code-bg: #f4f4f4;
+  --bg:         #ffffff;
+  --fg:         #1a2e2a;
+  --fg-2:       #3d6057;
+  --fg-3:       #8aada7;
+  --border:     #daeee9;
+  --hover:      #f0f8f5;
+  --code-bg:    #f0f8f5;
+  --accent:     #2FA084;
+  --accent-2:   #6FCF97;
+  --accent-dark: #1F6F5F;
+  --accent-dim: rgba(47, 160, 132, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:      #111111;
-    --fg:      #ededed;
-    --fg-2:    #aaaaaa;
-    --fg-3:    #666666;
-    --border:  #2a2a2a;
-    --hover:   #1c1c1c;
-    --code-bg: #1e1e1e;
+    --bg:          #0f1e1b;
+    --fg:          #EEEEEE;
+    --fg-2:        #b0cec8;
+    --fg-3:        #6a9690;
+    --border:      #1e3830;
+    --hover:       #162e29;
+    --code-bg:     #162e29;
+    --accent:      #6FCF97;
+    --accent-2:    #2FA084;
+    --accent-dark: #6FCF97;
+    --accent-dim:  rgba(111, 207, 151, 0.12);
   }
 }
 
@@ -150,7 +158,20 @@ body {
 }
 
 /* ── Utility ── */
-::selection { background: var(--fg); color: var(--bg); }
+::selection { background: var(--accent); color: #111; }
+
+/* ── Post card ── */
+.post-card {
+  transition: border-left-color 0.15s, background 0.15s;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+  margin-left: -0.875rem;
+}
+.post-card:hover {
+  border-left-color: var(--accent);
+  background: var(--accent-dim);
+  border-radius: 4px;
+}
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }

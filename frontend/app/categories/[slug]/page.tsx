@@ -22,7 +22,7 @@ export default async function CategoryPage({ params }: Props) {
   if (!cat) notFound();
 
   return (
-    <div className="max-w-2xl mx-auto px-5 sm:px-6 py-14">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-14">
       <Link
         href="/categories"
         className="text-xs mb-8 inline-block transition-opacity hover:opacity-60"

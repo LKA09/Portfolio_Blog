@@ -9,10 +9,13 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div className="max-w-2xl mx-auto px-5 sm:px-6 py-14">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-14">
 
       {/* 인트로 */}
       <section className="mb-14">
+        <h1 className="text-2xl font-bold tracking-tight mb-3" style={{ color: "var(--fg)" }}>
+          기술 블로그
+        </h1>
         <p className="text-sm leading-relaxed" style={{ color: "var(--fg-2)" }}>
           개발하면서 배운 것들, 풀었던 문제들, 만들고 있는 것들을 씁니다.
         </p>
@@ -56,8 +59,8 @@ export default async function HomePage() {
 
           <Link
             href="/posts"
-            className="inline-block mt-6 text-sm underline underline-offset-4"
-            style={{ color: "var(--fg-2)" }}
+            className="inline-block mt-6 text-sm font-medium transition-opacity hover:opacity-70"
+            style={{ color: "var(--accent)" }}
           >
             모든 글 보기 →
           </Link>
@@ -68,20 +71,21 @@ export default async function HomePage() {
           <h2 className="text-xs font-medium mb-5 uppercase tracking-widest" style={{ color: "var(--fg-3)" }}>
             카테고리
           </h2>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1.5">
             {categories.map((cat) => (
               <Link
                 key={cat.id}
                 href={`/categories/${cat.slug}`}
-                className="flex items-center justify-between group"
+                className="flex items-center justify-between group rounded px-2 py-1 -mx-2 transition-colors"
+                style={{ color: "var(--fg-2)" }}
               >
-                <span
-                  className="text-sm group-hover:underline"
-                  style={{ color: "var(--fg-2)" }}
-                >
+                <span className="text-xs group-hover:underline">
                   {cat.name}
                 </span>
-                <span className="text-xs" style={{ color: "var(--fg-3)" }}>
+                <span
+                  className="text-xs ml-1 px-1.5 py-0.5 rounded-full font-medium tabular-nums"
+                  style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
+                >
                   {cat.postCount}
                 </span>
               </Link>

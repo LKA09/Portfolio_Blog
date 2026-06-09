@@ -4,9 +4,13 @@ export default function Footer() {
       className="mt-auto"
       style={{ borderTop: "1px solid var(--border)" }}
     >
-      <div className="max-w-2xl mx-auto px-5 sm:px-6 py-8 flex items-center justify-between">
-        <span className="text-xs" style={{ color: "var(--fg-3)" }}>
-          © {new Date().getFullYear()} 김가빈
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 py-8 flex items-center justify-between">
+        <span className="flex items-center gap-1.5 text-xs" style={{ color: "var(--fg-3)" }}>
+          <span
+            className="inline-block w-1.5 h-1.5 rounded-sm"
+            style={{ background: "var(--accent)", opacity: 0.7 }}
+          />
+          © {new Date().getFullYear()} Lka09
         </span>
         <div className="flex items-center gap-5">
           <a
